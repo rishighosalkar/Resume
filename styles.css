@@ -27,7 +27,7 @@ a:hover {
 .top-row {
   display: block;
   gap: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .intro {
@@ -60,6 +60,7 @@ a:hover {
   margin: 0;
   font-size: 0.92rem;
   word-break: break-word;
+  color: #333;
 }
 
 .contact-section a {
@@ -87,19 +88,21 @@ a:hover {
 
 /* Headings */
 h1 {
-  font-size: 2rem;
+  font-size: 24px bold;
   margin-bottom: 4px;
-  color: #222;
+  color: #2b2b2b;
 }
 
 h2 {
   font-size: 1.2rem;
-  color: #555;
+  color: #5c5c5c;
   margin-top: 0;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 14px bold;
+  color: #333;
+  /* font-weight: 600; */
   text-transform: uppercase;
   /* border-bottom: 2px solid #333; */
   padding-bottom: 4px;
@@ -110,6 +113,7 @@ h4 {
   margin: 10px 0 4px;
   font-weight: 600;
   font-size: 1rem;
+  color: #1a1a1a;
 }
 
 /* Summary */
@@ -128,6 +132,11 @@ ul {
 li {
   margin-bottom: 6px;
   font-size: 0.92rem;
+}
+
+p,
+ul li {
+  color: #444;
 }
 
 /* Skill Tags */
