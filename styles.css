@@ -1,0 +1,194 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container Layout */
+.container {
+  max-width: 100%;
+  margin: auto;
+  page-break-inside: avoid;
+}
+
+/* Top Row: Intro + Contact */
+.top-row {
+  display: block;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.intro {
+  flex: 3;
+  border-bottom: 2px solid #333;
+}
+
+
+.contact-section {
+  flex: 2;
+  /* border: 1px solid #000; */
+  border-bottom: 2px solid #333;
+  padding: 12px;
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 8px;
+}
+
+.contact-section h3 {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.contact-section p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.92rem;
+  word-break: break-word;
+}
+
+.contact-section a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+/* Content Row: Two Columns */
+.content-row {
+  display: flex;
+  gap: 40px;
+}
+
+/* Left and Right Columns */
+.left-column {
+  flex: 3;
+}
+
+.right-column {
+  flex: 2;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  /* border-bottom: 2px solid #333; */
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin: 10px 0 4px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Summary */
+.summary {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+/* Skill Tags */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: #d1d5db;
+  color: #000;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 12px;
+}
+
+/* Italic Text */
+.italic {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Section Text */
+section p {
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+
+section ul {
+  margin-top: 4px;
+}
+
+@page {
+  size: A4;
+}
+
+@media print {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    overflow: visible !important;
+  }
+
+  /* Scale down content to fit one page */
+  body {
+    transform-origin: top left;
+    transform: scale(0.9); /* Adjust scale as needed */
+  }
+
+  /* Prevent page breaks inside your resume container */
+  #resume {
+    page-break-inside: avoid;
+    /* You can also set fixed height if needed */
+  }
+
+  /* Adjust fonts and spacing */
+  body, #resume {
+    font-size: 10pt;  /* smaller font to fit content */
+    line-height: 1.2;
+  }
+}
